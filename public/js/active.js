@@ -1,14 +1,11 @@
-const tabLinks = document.querySelectorAll('.project-tab')
+const tabLinks = document.querySelectorAll('.active-tab');
 
 tabLinks.forEach((tabLink) => {
   tabLink.addEventListener('click', (event) => {
-    console.log('Tab link clicked');
     tabLinks.forEach((link) => {
-      link.classList.remove('active-tab');
-      link.classList.add('inactive-tab');
+        link.setAttribute('aria-selected', 'false');
     });
 
-    tabLink.classList.add('active-tab');
-    tabLink.classList.remove('inactive-tab');
+    tabLink.setAttribute('aria-selected', 'true');
   });
 });
