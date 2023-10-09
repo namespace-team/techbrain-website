@@ -1,9 +1,9 @@
 # Techbrain Landing Page
 
-![Node.js Version](https://img.shields.io/badge/node-19.5.0-brightgreen)
+![Node.js Version](https://img.shields.io/badge/node-18.7.0-brightgreen)
 # Requirements
 
-- [Node.js](https://nodejs.org/en/) version [19.5.0]
+- [Node.js](https://nodejs.org/en/)
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
 - [Flowbite](https://flowbite.com/docs/getting-started/quickstart/)
 
