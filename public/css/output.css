@@ -1907,8 +1907,7 @@ input:checked + .toggle-bg {
 }
 
 .active-tab[aria-selected="true"]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(235 245 255 / var(--tw-bg-opacity));
+  background-color: transparent;
 }
 
 @media (min-width: 1024px) {
@@ -1930,8 +1929,7 @@ input:checked + .toggle-bg {
 }
 
 .active-tab[aria-selected="false"]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  background-color: transparent;
 }
 
 @media (min-width: 1024px) {
@@ -1950,6 +1948,7 @@ input:checked + .toggle-bg {
 @media (prefers-color-scheme: dark) {
   .active-tab[aria-selected="true"] {
     border-color: transparent;
+    background-color: transparent !important;
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
@@ -1964,10 +1963,6 @@ input:checked + .toggle-bg {
       --tw-text-opacity: 1;
       color: rgb(255 255 255 / var(--tw-text-opacity));
     }
-  }
-
-  .active-tab[aria-selected="true"] {
-    background-color: transparent !important;
   }
 
   .active-tab[aria-selected="false"] {
