@@ -1,19 +1,22 @@
-# techbrain-website
+# Techbrain Landing Page
 
 ![Node.js Version](https://img.shields.io/badge/node-19.5.0-brightgreen)
+# Requirements
 
-### Installation
+- [Node.js](https://nodejs.org/en/) version [19.5.0]
+- [Tailwind CSS](https://tailwindcss.com/docs/installation)
+- [Flowbite](https://flowbite.com/docs/getting-started/quickstart/)
 
-Make sure that you have [Node.js](https://nodejs.org/en/), [Tailwind CSS](https://tailwindcss.com/docs/installation) and [Flowbite](https://flowbite.com/docs/getting-started/quickstart/) installed.
+## Installation
 
 1. Clone the repository:
    ```shell
    git clone git@github.com:namespace-team/techbrain-website.git
    ```
 
-2. Run `npm install` inside your terminal
+2. Run `yarn install` inside your terminal
 
-3. Watch for files and compile Tailwind CSS + Flowbite:
+3. Watch for changes in style:
    ```shell
    yarn watch
    ```
@@ -23,9 +26,13 @@ Make sure that you have [Node.js](https://nodejs.org/en/), [Tailwind CSS](https:
    yarn start
    ```
 
-5. To compile ejs file into HTMl.
-   ```shell
-   yarn run build
-   ```
+5. Open your browser and navigate to http://127.0.0.1:3000.
 
-6. Open your browser and navigate to http://127.0.0.1:3000.
+
+## Compiling into HTML
+
+To compile an EJS file into HTML, you can use the following command:
+
+  ```shell
+  yarn run build
+  ```
