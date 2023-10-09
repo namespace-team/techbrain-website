@@ -1,11 +1,10 @@
-# Techbrain Landing Page
+# [Techbrain Landing Page](https://namespace-team.github.io/techbrain-website)
 
 ![Node.js Version](https://img.shields.io/badge/node-18.7.0-brightgreen)
+
 # Requirements
 
 - [Node.js](https://nodejs.org/en/)
-- [Tailwind CSS](https://tailwindcss.com/docs/installation)
-- [Flowbite](https://flowbite.com/docs/getting-started/quickstart/)
 
 ## Installation
 
