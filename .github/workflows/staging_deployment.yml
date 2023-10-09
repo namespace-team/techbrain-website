@@ -1,0 +1,39 @@
+name: Techbrain landing page staging deployment
+
+on:
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  check-index-html:
+    name: Check index.html
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn run build
+
+      - name: Check if index.html has changed
+        id: check-index-html
+        run: |
+          git diff --exit-code --quiet origin/main -- src/index.html
+          echo "Index.html is up to date."
+        continue-on-error: true
+
+      - name: Fail if index.html has changed
+        if: steps.check-index-html.outcome == 'success'
+        run: |
+          echo "Index.html has changed. Please rebuild it before merging your pull request."
+          exit 1
+
+      - name: Pass if index.html is up to date
+        if: steps.check-index-html.outcome == 'failure'
+        run: |
+          echo "Index.html is up to date."
