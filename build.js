@@ -11,7 +11,12 @@ const compileIndexEjs = () => {
     const ejsContent = fs.readFileSync(indexEjsFilePath, 'utf-8');
     fs.mkdirSync(path.dirname(htmlFilePath), { recursive: true });
 
-    const html = ejs.render(ejsContent, { filename: indexEjsFilePath });
+    var html = ejs.render(ejsContent, { filename: indexEjsFilePath });
+
+    html = html.replace(/"images/g, '"public/images');      
+    html = html.replace('/css/output.css', 'public/css/output.css');      
+    html = html.replace('/js', 'public/js');      
+
     fs.writeFileSync(htmlFilePath, html, 'utf-8');
 
     console.log(`Compiled ${indexEjsFilePath} to ${htmlFilePath}`);

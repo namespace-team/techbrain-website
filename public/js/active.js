@@ -12,28 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const homeLink = document.querySelector('#home-link');
-
-  homeLink.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-
-    if (activeSectionId) {
-      const previousSection = document.getElementById(activeSectionId);
-      if (previousSection) {
-        previousSection.removeAttribute('id');
-      }
-    }
-
-    activeSectionId = null;
-
-    history.pushState(null, null, window.location.pathname);
-  });
-
   window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section');
 
