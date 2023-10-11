@@ -8,7 +8,7 @@ const htmlDirectory = path.join(__dirname, 'views', 'html');
 
 // Function to compile the index.ejs file
 const compileIndexEjs = () => {
-  const indexEjsFilePath = path.join(ejsDirectory, 'index.ejs');
+  const indexEjsFilePath = path.join(__dirname, 'index.ejs');
   if (fs.existsSync(indexEjsFilePath)) {
     const ejsContent = fs.readFileSync(indexEjsFilePath, 'utf-8');
     const htmlFilePath = path.join(htmlDirectory, 'index.html');
