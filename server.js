@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('ejs/index');
 });
 
 const port = process.env.PORT || 3000;
